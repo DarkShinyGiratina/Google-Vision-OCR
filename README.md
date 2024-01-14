@@ -15,7 +15,7 @@ An OCR program I wrote that interfaces with Google's [Cloud Vision API](https://
    - You can press `Escape` to cancel the screenshot if you want.
 3. The program will then run the OCR and copy the result into your clipboard, allowing you to paste it anywhere (if using for language learning purposes like I am, you can paste into a [texthooker page](https://learnjapanese.moe/texthooker.html) with an extension like [Clipboard Inserter](https://chromewebstore.google.com/detail/clipboard-inserter/deahejllghicakhplliloeheabddjajm))
 
-## Running the Python Script
+## Running the Python Script Instead of the EXE
 
 Note that this script was written in Python 3.12. I'm not sure if you _need_ Python 3.12 to run it but I would make sure you have the [latest version](https://www.python.org/downloads/) installed.
 
