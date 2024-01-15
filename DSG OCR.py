@@ -102,6 +102,7 @@ def new_ocr():
             break
         root.update()
     root.destroy()
+    print("Ready for another screenshot.")
 
 
 def main():
