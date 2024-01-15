@@ -5,12 +5,12 @@ from pynput import mouse
 import keyboard
 import pyperclip
 import google.auth
-from tkinter import Tk, Canvas
+from customtkinter import CTk, CTkCanvas
 
 creds_file = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
 creds = google.auth.load_credentials_from_file(creds_file)[0] if creds_file else None
 
-root = Tk()
+root = CTk()
 
 
 def detect_text(path):
@@ -68,9 +68,8 @@ def on_click(x, y, button, pressed):
 
 def make_gui():
     global root
-    root = Tk()
+    root = CTk()
     root.attributes("-fullscreen", True, '-topmost', True, "-alpha", 0.3)
-    root["bg"] = "grey"
     start_x = start_y = 0
     rect = -1
 
@@ -84,7 +83,7 @@ def make_gui():
         curX, curY = (event.x, event.y)
         canvas.coords(rect, start_x, start_y, curX, curY)
 
-    canvas = Canvas(root)
+    canvas = CTkCanvas(root)
     canvas.bind("<ButtonPress-1>", on_click)
     canvas.bind("<B1-Motion>", on_move)
     canvas.pack(fill='both', expand=1)
